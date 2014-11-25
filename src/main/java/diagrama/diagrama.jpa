@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings id="_141687244729440" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd" xmlns:ns4="http://nbmodeler.java.net" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <jpa:entity class="Actividad" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244732943">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="actividad"/>
+        <jpa:named-query name="Actividad.findAll">
+            <jpa:query>SELECT a FROM Actividad a</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Actividad.findByCodigo">
+            <jpa:query>SELECT a FROM Actividad a WHERE a.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Actividad.findByDescripcion">
+            <jpa:query>SELECT a FROM Actividad a WHERE a.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Actividad.findByVigencia">
+            <jpa:query>SELECT a FROM Actividad a WHERE a.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_141687244733044">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_141687244733145">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_141687244733146">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="CategoriaOcupacional" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244736247">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="categoria_ocupacional"/>
+        <jpa:named-query name="CategoriaOcupacional.findAll">
+            <jpa:query>SELECT c FROM CategoriaOcupacional c</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CategoriaOcupacional.findByCodigo">
+            <jpa:query>SELECT c FROM CategoriaOcupacional c WHERE c.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CategoriaOcupacional.findByDescripcion">
+            <jpa:query>SELECT c FROM CategoriaOcupacional c WHERE c.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CategoriaOcupacional.findBySectorPrivado">
+            <jpa:query>SELECT c FROM CategoriaOcupacional c WHERE c.sectorPrivado = :sectorPrivado</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CategoriaOcupacional.findBySectorPublico">
+            <jpa:query>SELECT c FROM CategoriaOcupacional c WHERE c.sectorPublico = :sectorPublico</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CategoriaOcupacional.findByOtraEntidad">
+            <jpa:query>SELECT c FROM CategoriaOcupacional c WHERE c.otraEntidad = :otraEntidad</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CategoriaOcupacional.findByVigencia">
+            <jpa:query>SELECT c FROM CategoriaOcupacional c WHERE c.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_141687244736248">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_141687244736349">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPrivado" attribute-type="java.lang.Boolean" visibile="true" id="_141687244736350">
+                <jpa:column name="SectorPrivado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPublico" attribute-type="java.lang.Boolean" visibile="true" id="_141687244736351">
+                <jpa:column name="SectorPublico" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="otraEntidad" attribute-type="java.lang.Boolean" visibile="true" id="_141687244736352">
+                <jpa:column name="OtraEntidad" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_141687244736353">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="CodigoDistancia" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244740454">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="codigo_distancia"/>
+        <jpa:named-query name="CodigoDistancia.findAll">
+            <jpa:query>SELECT c FROM CodigoDistancia c</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CodigoDistancia.findByCodigo">
+            <jpa:query>SELECT c FROM CodigoDistancia c WHERE c.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CodigoDistancia.findByDescripcion">
+            <jpa:query>SELECT c FROM CodigoDistancia c WHERE c.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="CodigoDistancia.findByVigencia">
+            <jpa:query>SELECT c FROM CodigoDistancia c WHERE c.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_141687244740555">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_141687244740556">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_141687244740557">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="ComprobantePago" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244743358">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="comprobante_pago"/>
+        <jpa:named-query name="ComprobantePago.findAll">
+            <jpa:query>SELECT c FROM ComprobantePago c</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="ComprobantePago.findByCodigo">
+            <jpa:query>SELECT c FROM ComprobantePago c WHERE c.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="ComprobantePago.findByDescripcion">
+            <jpa:query>SELECT c FROM ComprobantePago c WHERE c.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="ComprobantePago.findByVigencia">
+            <jpa:query>SELECT c FROM ComprobantePago c WHERE c.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_141687244743459">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_141687244743460">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_141687244743461">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Contrato" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244746462">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="contrato"/>
+        <jpa:named-query name="Contrato.findAll">
+            <jpa:query>SELECT c FROM Contrato c</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findByIdcontrato">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.idcontrato = :idcontrato</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findByFechaInicial">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.fechaInicial = :fechaInicial</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findByFechaFinal">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.fechaFinal = :fechaFinal</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findByEssaludVida">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.essaludVida = :essaludVida</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findByAsignacionFamiliar">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.asignacionFamiliar = :asignacionFamiliar</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findBySueldo">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.sueldo = :sueldo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findByVigente">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.vigente = :vigente</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Contrato.findByEliminado">
+            <jpa:query>SELECT c FROM Contrato c WHERE c.eliminado = :eliminado</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="idcontrato" attribute-type="java.lang.Long" visibile="true" id="_141687244746463">
+                <jpa:column name="idcontrato" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="idcontrato"/>
+            </jpa:id>
+            <jpa:basic name="fechaInicial" attribute-type="java.util.Date" visibile="true" id="_141687244746464">
+                <jpa:column name="fecha_inicial" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="fechaFinal" attribute-type="java.util.Date" visibile="true" id="_141687244746565">
+                <jpa:column name="fecha_final" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="essaludVida" attribute-type="java.lang.String" visibile="true" id="_141687244746566">
+                <jpa:column name="essalud_vida" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="asignacionFamiliar" attribute-type="java.lang.String" visibile="true" id="_141687244746567">
+                <jpa:column name="asignacion_familiar" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sueldo" attribute-type="java.math.BigInteger" visibile="true" id="_141687244746568">
+                <jpa:column name="sueldo" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigente" attribute-type="java.lang.Boolean" visibile="true" id="_141687244746569">
+                <jpa:column name="vigente" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="eliminado" attribute-type="java.lang.Boolean" visibile="true" id="_141687244746570">
+                <jpa:column name="eliminado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one name="idtrabajador" target-entity="Trabajador" optional="false" primaryKey="false" connected-entity-id="_1416872448322252" connected-attribute-id="_1416872448324269" visibile="true" id="_141687244746874"/>
+            <jpa:one-to-many name="periodoTipotrabajadorList" target-entity="PeriodoTipotrabajador" mapped-by="idcontrato" collection-type="java.util.List" connected-entity-id="_1416872447943173" connected-attribute-id="_1416872447944179" visibile="true" id="_141687244746671">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many name="regimenPensionList" target-entity="RegimenPension" mapped-by="idcontrato" collection-type="java.util.List" connected-entity-id="_1416872448054199" connected-attribute-id="_1416872448055207" visibile="true" id="_141687244746672">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many name="regimenSaludList" target-entity="RegimenSalud" mapped-by="idcontrato" collection-type="java.util.List" connected-entity-id="_1416872448110216" connected-attribute-id="_1416872448111222" visibile="true" id="_141687244746673">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Convenio" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244750075">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="convenio"/>
+        <jpa:named-query name="Convenio.findAll">
+            <jpa:query>SELECT c FROM Convenio c</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Convenio.findByCodigo">
+            <jpa:query>SELECT c FROM Convenio c WHERE c.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Convenio.findByDescripcion">
+            <jpa:query>SELECT c FROM Convenio c WHERE c.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Convenio.findByVigencia">
+            <jpa:query>SELECT c FROM Convenio c WHERE c.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_141687244750076">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_141687244750077">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_141687244750178">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="DatoPersona" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244752979">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="dato_persona"/>
+        <jpa:named-query name="DatoPersona.findAll">
+            <jpa:query>SELECT d FROM DatoPersona d</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersona.findByIdDatoPersona">
+            <jpa:query>SELECT d FROM DatoPersona d WHERE d.idDatoPersona = :idDatoPersona</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersona.findByNombres">
+            <jpa:query>SELECT d FROM DatoPersona d WHERE d.nombres = :nombres</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersona.findByApellidopaterno">
+            <jpa:query>SELECT d FROM DatoPersona d WHERE d.apellidopaterno = :apellidopaterno</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersona.findByApellidoMaterno">
+            <jpa:query>SELECT d FROM DatoPersona d WHERE d.apellidoMaterno = :apellidoMaterno</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersona.findByNumerodocumento">
+            <jpa:query>SELECT d FROM DatoPersona d WHERE d.numerodocumento = :numerodocumento</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersona.findByVigente">
+            <jpa:query>SELECT d FROM DatoPersona d WHERE d.vigente = :vigente</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersona.findByCodigohouse">
+            <jpa:query>SELECT d FROM DatoPersona d WHERE d.codigohouse = :codigohouse</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="idDatoPersona" attribute-type="java.lang.Integer" visibile="true" id="_141687244753080">
+                <jpa:column name="idDato_Persona" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="idDato_Persona"/>
+            </jpa:id>
+            <jpa:basic name="nombres" attribute-type="java.lang.String" visibile="true" id="_141687244753081">
+                <jpa:column name="Nombres" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="apellidopaterno" optional="false" attribute-type="java.lang.String" visibile="true" id="_141687244753082">
+                <jpa:column name="Apellido_paterno" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="apellidoMaterno" attribute-type="java.lang.String" visibile="true" id="_141687244753083">
+                <jpa:column name="Apellido_Materno" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="numerodocumento" attribute-type="java.lang.String" visibile="true" id="_141687244753084">
+                <jpa:column name="Numero_documento" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigente" attribute-type="java.lang.String" visibile="true" id="_141687244753085">
+                <jpa:column name="Vigente" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="codigohouse" attribute-type="java.math.BigInteger" visibile="true" id="_141687244753186">
+                <jpa:column name="Codigo_house" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:one-to-many name="datoPersonalList" target-entity="DatoPersonal" mapped-by="idDatoPersona" collection-type="java.util.List" connected-entity-id="_141687244756088" connected-attribute-id="_141687244756199" visibile="true" id="_141687244753187">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="DatoPersonal" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_141687244756088">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="dato_personal"/>
+        <jpa:named-query name="DatoPersonal.findAll">
+            <jpa:query>SELECT d FROM DatoPersonal d</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByIdDatoPersonal">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.idDatoPersonal = :idDatoPersonal</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByFechaNacimiento">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.fechaNacimiento = :fechaNacimiento</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findBySexo">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.sexo = :sexo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByCentroAsistencial">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.centroAsistencial = :centroAsistencial</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByTelefono">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.telefono = :telefono</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByCelular">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.celular = :celular</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByEmail">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.email = :email</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByCusspp">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.cusspp = :cusspp</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByCategoria">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.categoria = :categoria</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DatoPersonal.findByEstadoCivil">
+            <jpa:query>SELECT d FROM DatoPersonal d WHERE d.estadoCivil = :estadoCivil</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="idDatoPersonal" attribute-type="java.lang.Integer" visibile="true" id="_141687244756089">
+                <jpa:column name="idDato_Personal" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="idDato_Personal"/>
+            </jpa:id>
+            <jpa:basic name="fechaNacimiento" attribute-type="java.util.Date" visibile="true" id="_141687244756090">
+                <jpa:column name="Fecha_Nacimiento" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="sexo" attribute-type="java.lang.Character" visibile="true" id="_141687244756091">
+                <jpa:column name="Sexo" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="centroAsistencial" attribute-type="java.lang.Integer" visibile="true" id="_141687244756192">
+                <jpa:column name="Centro_Asistencial" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="telefono" attribute-type="java.lang.String" visibile="true" id="_141687244756193">
+                <jpa:column name="Telefono" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="celular" attribute-type="java.lang.String" visibile="true" id="_141687244756194">
+                <jpa:column name="Celular" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="email" attribute-type="java.lang.String" visibile="true" id="_141687244756195">
+                <jpa:column name="Email" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="cusspp" attribute-type="java.lang.String" visibile="true" id="_141687244756196">
+                <jpa:column name="Cusspp" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="categoria" attribute-type="java.lang.Character" visibile="true" id="_141687244756197">
+                <jpa:column name="Categoria" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="estadoCivil" attribute-type="java.lang.String" visibile="true" id="_141687244756198">
+                <jpa:column name="EstadoCivil" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one name="idDatoPersona" target-entity="DatoPersona" optional="false" primaryKey="false" connected-entity-id="_141687244752979" connected-attribute-id="_141687244753187" visibile="true" id="_141687244756199"/>
+            <jpa:one-to-many name="direccionList" target-entity="Direccion" mapped-by="datopersonalidDatoPersonal" collection-type="java.util.List" connected-entity-id="_1416872447589101" connected-attribute-id="_1416872447591115" visibile="true" id="_1416872447562100">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Direccion" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447589101">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="direccion"/>
+        <jpa:named-query name="Direccion.findAll">
+            <jpa:query>SELECT d FROM Direccion d</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByIddireccion">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.iddireccion = :iddireccion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByNombreVia">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.nombreVia = :nombreVia</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByNroVia">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.nroVia = :nroVia</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByDepartamento">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.departamento = :departamento</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByInterior">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.interior = :interior</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByManzana">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.manzana = :manzana</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByLote">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.lote = :lote</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByKilometro">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.kilometro = :kilometro</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByBlock">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.block = :block</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByEtapa">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.etapa = :etapa</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByNombreZona">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.nombreZona = :nombreZona</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByReferencia">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.referencia = :referencia</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Direccion.findByNumero">
+            <jpa:query>SELECT d FROM Direccion d WHERE d.numero = :numero</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="iddireccion" attribute-type="java.lang.Integer" visibile="true" id="_1416872447590102">
+                <jpa:column name="iddireccion" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="iddireccion"/>
+            </jpa:id>
+            <jpa:basic name="nombreVia" attribute-type="java.lang.String" visibile="true" id="_1416872447590103">
+                <jpa:column name="nombre_via" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="nroVia" attribute-type="java.lang.String" visibile="true" id="_1416872447590104">
+                <jpa:column name="nro_via" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="departamento" attribute-type="java.lang.String" visibile="true" id="_1416872447590105">
+                <jpa:column name="departamento" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="interior" attribute-type="java.lang.String" visibile="true" id="_1416872447590106">
+                <jpa:column name="interior" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="manzana" attribute-type="java.lang.String" visibile="true" id="_1416872447590107">
+                <jpa:column name="manzana" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="lote" attribute-type="java.lang.String" visibile="true" id="_1416872447591108">
+                <jpa:column name="lote" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="kilometro" attribute-type="java.lang.String" visibile="true" id="_1416872447591109">
+                <jpa:column name="kilometro" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="block" attribute-type="java.lang.String" visibile="true" id="_1416872447591110">
+                <jpa:column name="block" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="etapa" attribute-type="java.lang.String" visibile="true" id="_1416872447591111">
+                <jpa:column name="etapa" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="nombreZona" attribute-type="java.lang.String" visibile="true" id="_1416872447591112">
+                <jpa:column name="nombre_zona" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="referencia" attribute-type="java.lang.String" visibile="true" id="_1416872447591113">
+                <jpa:column name="referencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="numero" attribute-type="java.lang.Integer" visibile="true" id="_1416872447591114">
+                <jpa:column name="numero" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one name="datopersonalidDatoPersonal" target-entity="DatoPersonal" optional="false" primaryKey="false" connected-entity-id="_141687244756088" connected-attribute-id="_1416872447562100" visibile="true" id="_1416872447591115"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="DocumentoIdentificacion" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447618116">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="documento_identificacion"/>
+        <jpa:named-query name="DocumentoIdentificacion.findAll">
+            <jpa:query>SELECT d FROM DocumentoIdentificacion d</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoIdentificacion.findByCodigo">
+            <jpa:query>SELECT d FROM DocumentoIdentificacion d WHERE d.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoIdentificacion.findByDescripcion">
+            <jpa:query>SELECT d FROM DocumentoIdentificacion d WHERE d.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoIdentificacion.findByAbreviatura">
+            <jpa:query>SELECT d FROM DocumentoIdentificacion d WHERE d.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoIdentificacion.findByVigencia">
+            <jpa:query>SELECT d FROM DocumentoIdentificacion d WHERE d.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447618117">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447618118">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872447618119">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447618120">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="DocumentoVinculo" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447645121">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="documento_vinculo"/>
+        <jpa:named-query name="DocumentoVinculo.findAll">
+            <jpa:query>SELECT d FROM DocumentoVinculo d</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoVinculo.findByCodigo">
+            <jpa:query>SELECT d FROM DocumentoVinculo d WHERE d.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoVinculo.findByDescripcion">
+            <jpa:query>SELECT d FROM DocumentoVinculo d WHERE d.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoVinculo.findByAbreviatura">
+            <jpa:query>SELECT d FROM DocumentoVinculo d WHERE d.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="DocumentoVinculo.findByVigencia">
+            <jpa:query>SELECT d FROM DocumentoVinculo d WHERE d.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447645122">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447645123">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872447645124">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447645125">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Eps" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447672126">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="eps"/>
+        <jpa:named-query name="Eps.findAll">
+            <jpa:query>SELECT e FROM Eps e</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Eps.findByCodigo">
+            <jpa:query>SELECT e FROM Eps e WHERE e.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Eps.findByRuc">
+            <jpa:query>SELECT e FROM Eps e WHERE e.ruc = :ruc</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Eps.findByDescripcion">
+            <jpa:query>SELECT e FROM Eps e WHERE e.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Eps.findByVigencia">
+            <jpa:query>SELECT e FROM Eps e WHERE e.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447672127">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="ruc" attribute-type="java.lang.String" visibile="true" id="_1416872447672128">
+                <jpa:column name="Ruc" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447672129">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447672130">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="ModalidadFormativa" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447699131">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="modalidad_formativa"/>
+        <jpa:named-query name="ModalidadFormativa.findAll">
+            <jpa:query>SELECT m FROM ModalidadFormativa m</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="ModalidadFormativa.findByCodigo">
+            <jpa:query>SELECT m FROM ModalidadFormativa m WHERE m.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="ModalidadFormativa.findByDescripcion">
+            <jpa:query>SELECT m FROM ModalidadFormativa m WHERE m.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="ModalidadFormativa.findByAbreviatura">
+            <jpa:query>SELECT m FROM ModalidadFormativa m WHERE m.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="ModalidadFormativa.findByVigencia">
+            <jpa:query>SELECT m FROM ModalidadFormativa m WHERE m.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447699132">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447699133">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872447699134">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447699135">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="MotivoBaja" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447726136">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="motivo_baja"/>
+        <jpa:named-query name="MotivoBaja.findAll">
+            <jpa:query>SELECT m FROM MotivoBaja m</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBaja.findByCodigo">
+            <jpa:query>SELECT m FROM MotivoBaja m WHERE m.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBaja.findByDescripcion">
+            <jpa:query>SELECT m FROM MotivoBaja m WHERE m.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBaja.findByAbreviatura">
+            <jpa:query>SELECT m FROM MotivoBaja m WHERE m.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBaja.findByVigencia">
+            <jpa:query>SELECT m FROM MotivoBaja m WHERE m.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447726137">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447726138">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872447726139">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447726140">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="MotivoBajaDerecho" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447752141">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="motivo_baja_derecho"/>
+        <jpa:named-query name="MotivoBajaDerecho.findAll">
+            <jpa:query>SELECT m FROM MotivoBajaDerecho m</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBajaDerecho.findByCodigo">
+            <jpa:query>SELECT m FROM MotivoBajaDerecho m WHERE m.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBajaDerecho.findByDescripcion">
+            <jpa:query>SELECT m FROM MotivoBajaDerecho m WHERE m.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBajaDerecho.findByAbreviatura">
+            <jpa:query>SELECT m FROM MotivoBajaDerecho m WHERE m.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="MotivoBajaDerecho.findByVigencia">
+            <jpa:query>SELECT m FROM MotivoBajaDerecho m WHERE m.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447753142">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447753143">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872447753144">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447753145">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Nacionalidad" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447780146">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="nacionalidad"/>
+        <jpa:named-query name="Nacionalidad.findAll">
+            <jpa:query>SELECT n FROM Nacionalidad n</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Nacionalidad.findByCodigo">
+            <jpa:query>SELECT n FROM Nacionalidad n WHERE n.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Nacionalidad.findByDescripcion">
+            <jpa:query>SELECT n FROM Nacionalidad n WHERE n.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Nacionalidad.findByVigencia">
+            <jpa:query>SELECT n FROM Nacionalidad n WHERE n.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447780147">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447780148">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447780149">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Ocupacion" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447806150">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="ocupacion"/>
+        <jpa:named-query name="Ocupacion.findAll">
+            <jpa:query>SELECT o FROM Ocupacion o</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ocupacion.findByCodigo">
+            <jpa:query>SELECT o FROM Ocupacion o WHERE o.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ocupacion.findByNombre">
+            <jpa:query>SELECT o FROM Ocupacion o WHERE o.nombre = :nombre</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ocupacion.findByVigencia">
+            <jpa:query>SELECT o FROM Ocupacion o WHERE o.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447807151">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="nombre" attribute-type="java.lang.String" visibile="true" id="_1416872447807152">
+                <jpa:column name="Nombre" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447807153">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="OcupacionSp" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447833154">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="ocupacion_sp"/>
+        <jpa:named-query name="OcupacionSp.findAll">
+            <jpa:query>SELECT o FROM OcupacionSp o</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="OcupacionSp.findByCodigo">
+            <jpa:query>SELECT o FROM OcupacionSp o WHERE o.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="OcupacionSp.findByNombre">
+            <jpa:query>SELECT o FROM OcupacionSp o WHERE o.nombre = :nombre</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="OcupacionSp.findByEjecutivo">
+            <jpa:query>SELECT o FROM OcupacionSp o WHERE o.ejecutivo = :ejecutivo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="OcupacionSp.findByEmpleado">
+            <jpa:query>SELECT o FROM OcupacionSp o WHERE o.empleado = :empleado</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="OcupacionSp.findByObrero">
+            <jpa:query>SELECT o FROM OcupacionSp o WHERE o.obrero = :obrero</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="OcupacionSp.findByVigencia">
+            <jpa:query>SELECT o FROM OcupacionSp o WHERE o.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447834155">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="nombre" attribute-type="java.lang.String" visibile="true" id="_1416872447834156">
+                <jpa:column name="Nombre" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="ejecutivo" attribute-type="java.lang.Character" visibile="true" id="_1416872447834157">
+                <jpa:column name="Ejecutivo" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="empleado" attribute-type="java.lang.Character" visibile="true" id="_1416872447834158">
+                <jpa:column name="Empleado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="obrero" attribute-type="java.lang.Character" visibile="true" id="_1416872447834159">
+                <jpa:column name="Obrero" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447834160">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Pago" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447861161">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="pago"/>
+        <jpa:named-query name="Pago.findAll">
+            <jpa:query>SELECT p FROM Pago p</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Pago.findByCodigo">
+            <jpa:query>SELECT p FROM Pago p WHERE p.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Pago.findByDescripcion">
+            <jpa:query>SELECT p FROM Pago p WHERE p.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Pago.findByVigencia">
+            <jpa:query>SELECT p FROM Pago p WHERE p.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447861162">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447861163">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447861164">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="PaisEmisor" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447888165">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="pais_emisor"/>
+        <jpa:named-query name="PaisEmisor.findAll">
+            <jpa:query>SELECT p FROM PaisEmisor p</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PaisEmisor.findByCodigo">
+            <jpa:query>SELECT p FROM PaisEmisor p WHERE p.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PaisEmisor.findByDescripcion">
+            <jpa:query>SELECT p FROM PaisEmisor p WHERE p.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PaisEmisor.findByVigencia">
+            <jpa:query>SELECT p FROM PaisEmisor p WHERE p.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447888166">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447888167">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447889168">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Periodicidad" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447915169">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="periodicidad"/>
+        <jpa:named-query name="Periodicidad.findAll">
+            <jpa:query>SELECT p FROM Periodicidad p</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Periodicidad.findByCodigo">
+            <jpa:query>SELECT p FROM Periodicidad p WHERE p.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Periodicidad.findByDescripcion">
+            <jpa:query>SELECT p FROM Periodicidad p WHERE p.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Periodicidad.findByVigencia">
+            <jpa:query>SELECT p FROM Periodicidad p WHERE p.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447915170">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447915171">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447915172">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="PeriodoTipotrabajador" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447943173">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="periodo_tipotrabajador"/>
+        <jpa:named-query name="PeriodoTipotrabajador.findAll">
+            <jpa:query>SELECT p FROM PeriodoTipotrabajador p</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PeriodoTipotrabajador.findByIdperiodoTipotrabajador">
+            <jpa:query>SELECT p FROM PeriodoTipotrabajador p WHERE p.idperiodoTipotrabajador = :idperiodoTipotrabajador</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PeriodoTipotrabajador.findByFechaInicial">
+            <jpa:query>SELECT p FROM PeriodoTipotrabajador p WHERE p.fechaInicial = :fechaInicial</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PeriodoTipotrabajador.findByFechaFinal">
+            <jpa:query>SELECT p FROM PeriodoTipotrabajador p WHERE p.fechaFinal = :fechaFinal</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PeriodoTipotrabajador.findByVigente">
+            <jpa:query>SELECT p FROM PeriodoTipotrabajador p WHERE p.vigente = :vigente</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PeriodoTipotrabajador.findByEliminado">
+            <jpa:query>SELECT p FROM PeriodoTipotrabajador p WHERE p.eliminado = :eliminado</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="idperiodoTipotrabajador" attribute-type="java.lang.Long" visibile="true" id="_1416872447944174">
+                <jpa:column name="idperiodo_tipotrabajador" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="idperiodo_tipotrabajador"/>
+            </jpa:id>
+            <jpa:basic name="fechaInicial" attribute-type="java.util.Date" visibile="true" id="_1416872447944175">
+                <jpa:column name="fecha_inicial" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="fechaFinal" attribute-type="java.util.Date" visibile="true" id="_1416872447944176">
+                <jpa:column name="fecha_final" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="vigente" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447944177">
+                <jpa:column name="vigente" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="eliminado" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447944178">
+                <jpa:column name="eliminado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one name="idcontrato" target-entity="Contrato" optional="false" primaryKey="false" connected-entity-id="_141687244746462" connected-attribute-id="_141687244746671" visibile="true" id="_1416872447944179"/>
+            <jpa:many-to-one name="idtrabajador" target-entity="Trabajador" optional="false" primaryKey="false" connected-entity-id="_1416872448322252" connected-attribute-id="_1416872448324266" visibile="true" id="_1416872447944180"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="PliegoPresupuestal" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447970181">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="pliego_presupuestal"/>
+        <jpa:named-query name="PliegoPresupuestal.findAll">
+            <jpa:query>SELECT p FROM PliegoPresupuestal p</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PliegoPresupuestal.findByCodigo">
+            <jpa:query>SELECT p FROM PliegoPresupuestal p WHERE p.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PliegoPresupuestal.findByDescripcion">
+            <jpa:query>SELECT p FROM PliegoPresupuestal p WHERE p.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PliegoPresupuestal.findByAbreviatura">
+            <jpa:query>SELECT p FROM PliegoPresupuestal p WHERE p.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="PliegoPresupuestal.findByVigencia">
+            <jpa:query>SELECT p FROM PliegoPresupuestal p WHERE p.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447971182">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447971183">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872447971184">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447971185">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="RegimenAseguramiento" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872447997186">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="regimen_aseguramiento"/>
+        <jpa:named-query name="RegimenAseguramiento.findAll">
+            <jpa:query>SELECT r FROM RegimenAseguramiento r</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenAseguramiento.findByCodigo">
+            <jpa:query>SELECT r FROM RegimenAseguramiento r WHERE r.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenAseguramiento.findByDescripcion">
+            <jpa:query>SELECT r FROM RegimenAseguramiento r WHERE r.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenAseguramiento.findByAbreviatura">
+            <jpa:query>SELECT r FROM RegimenAseguramiento r WHERE r.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenAseguramiento.findByVigencia">
+            <jpa:query>SELECT r FROM RegimenAseguramiento r WHERE r.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872447998187">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872447998188">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872447998189">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872447998190">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="RegimenLaboral" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448024191">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="regimen_laboral"/>
+        <jpa:named-query name="RegimenLaboral.findAll">
+            <jpa:query>SELECT r FROM RegimenLaboral r</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenLaboral.findByCodigo">
+            <jpa:query>SELECT r FROM RegimenLaboral r WHERE r.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenLaboral.findByDescripcion">
+            <jpa:query>SELECT r FROM RegimenLaboral r WHERE r.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenLaboral.findByAbreviatura">
+            <jpa:query>SELECT r FROM RegimenLaboral r WHERE r.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenLaboral.findBySectorPrivado">
+            <jpa:query>SELECT r FROM RegimenLaboral r WHERE r.sectorPrivado = :sectorPrivado</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenLaboral.findBySectorPublico">
+            <jpa:query>SELECT r FROM RegimenLaboral r WHERE r.sectorPublico = :sectorPublico</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenLaboral.findByOtraEntidad">
+            <jpa:query>SELECT r FROM RegimenLaboral r WHERE r.otraEntidad = :otraEntidad</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenLaboral.findByVigencia">
+            <jpa:query>SELECT r FROM RegimenLaboral r WHERE r.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448025192">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448025193">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448025194">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPrivado" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448025195">
+                <jpa:column name="SectorPrivado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPublico" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448025196">
+                <jpa:column name="SectorPublico" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="otraEntidad" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448025197">
+                <jpa:column name="OtraEntidad" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448025198">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="RegimenPension" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448054199">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="regimen_pension"/>
+        <jpa:named-query name="RegimenPension.findAll">
+            <jpa:query>SELECT r FROM RegimenPension r</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPension.findByIdregimenPension">
+            <jpa:query>SELECT r FROM RegimenPension r WHERE r.idregimenPension = :idregimenPension</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPension.findByFechaInicial">
+            <jpa:query>SELECT r FROM RegimenPension r WHERE r.fechaInicial = :fechaInicial</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPension.findByFechaFinal">
+            <jpa:query>SELECT r FROM RegimenPension r WHERE r.fechaFinal = :fechaFinal</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPension.findByVigente">
+            <jpa:query>SELECT r FROM RegimenPension r WHERE r.vigente = :vigente</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPension.findByTipoComision">
+            <jpa:query>SELECT r FROM RegimenPension r WHERE r.tipoComision = :tipoComision</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPension.findByEliminado">
+            <jpa:query>SELECT r FROM RegimenPension r WHERE r.eliminado = :eliminado</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="idregimenPension" attribute-type="java.lang.Long" visibile="true" id="_1416872448054200">
+                <jpa:column name="idregimen_pension" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="idregimen_pension"/>
+            </jpa:id>
+            <jpa:basic name="fechaInicial" attribute-type="java.util.Date" visibile="true" id="_1416872448054201">
+                <jpa:column name="fecha_inicial" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="fechaFinal" attribute-type="java.util.Date" visibile="true" id="_1416872448054202">
+                <jpa:column name="fecha_final" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="vigente" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448054203">
+                <jpa:column name="vigente" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="tipoComision" attribute-type="java.lang.Character" visibile="true" id="_1416872448054204">
+                <jpa:column name="tipo_comision" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="eliminado" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448055205">
+                <jpa:column name="eliminado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one name="idtrabajador" target-entity="Trabajador" optional="false" primaryKey="false" connected-entity-id="_1416872448322252" connected-attribute-id="_1416872448324267" visibile="true" id="_1416872448055206"/>
+            <jpa:many-to-one name="idcontrato" target-entity="Contrato" optional="false" primaryKey="false" connected-entity-id="_141687244746462" connected-attribute-id="_141687244746672" visibile="true" id="_1416872448055207"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="RegimenPensionario" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448081208">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="regimen_pensionario"/>
+        <jpa:named-query name="RegimenPensionario.findAll">
+            <jpa:query>SELECT r FROM RegimenPensionario r</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPensionario.findByCodigo">
+            <jpa:query>SELECT r FROM RegimenPensionario r WHERE r.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPensionario.findByDescripcion">
+            <jpa:query>SELECT r FROM RegimenPensionario r WHERE r.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPensionario.findByAbreviatura">
+            <jpa:query>SELECT r FROM RegimenPensionario r WHERE r.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPensionario.findBySectorPrivado">
+            <jpa:query>SELECT r FROM RegimenPensionario r WHERE r.sectorPrivado = :sectorPrivado</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPensionario.findBySectorPublico">
+            <jpa:query>SELECT r FROM RegimenPensionario r WHERE r.sectorPublico = :sectorPublico</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPensionario.findByOtraEntidad">
+            <jpa:query>SELECT r FROM RegimenPensionario r WHERE r.otraEntidad = :otraEntidad</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenPensionario.findByVigencia">
+            <jpa:query>SELECT r FROM RegimenPensionario r WHERE r.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448081209">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448081210">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448082211">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPrivado" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448082212">
+                <jpa:column name="SectorPrivado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPublico" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448082213">
+                <jpa:column name="SectorPublico" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="otraEntidad" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448082214">
+                <jpa:column name="OtraEntidad" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448082215">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="RegimenSalud" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448110216">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="regimen_salud"/>
+        <jpa:named-query name="RegimenSalud.findAll">
+            <jpa:query>SELECT r FROM RegimenSalud r</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenSalud.findByIdregimenSalud">
+            <jpa:query>SELECT r FROM RegimenSalud r WHERE r.idregimenSalud = :idregimenSalud</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenSalud.findByFechaInicial">
+            <jpa:query>SELECT r FROM RegimenSalud r WHERE r.fechaInicial = :fechaInicial</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenSalud.findByFechaFinal">
+            <jpa:query>SELECT r FROM RegimenSalud r WHERE r.fechaFinal = :fechaFinal</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenSalud.findByVigente">
+            <jpa:query>SELECT r FROM RegimenSalud r WHERE r.vigente = :vigente</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="RegimenSalud.findByEliminado">
+            <jpa:query>SELECT r FROM RegimenSalud r WHERE r.eliminado = :eliminado</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="idregimenSalud" attribute-type="java.lang.Long" visibile="true" id="_1416872448111217">
+                <jpa:column name="idregimen_salud" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="idregimen_salud"/>
+            </jpa:id>
+            <jpa:basic name="fechaInicial" attribute-type="java.util.Date" visibile="true" id="_1416872448111218">
+                <jpa:column name="fecha_inicial" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="fechaFinal" attribute-type="java.util.Date" visibile="true" id="_1416872448111219">
+                <jpa:column name="fecha_final" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+            </jpa:basic>
+            <jpa:basic name="vigente" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448111220">
+                <jpa:column name="Vigente" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="eliminado" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448111221">
+                <jpa:column name="eliminado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one name="idcontrato" target-entity="Contrato" optional="false" primaryKey="false" connected-entity-id="_141687244746462" connected-attribute-id="_141687244746673" visibile="true" id="_1416872448111222"/>
+            <jpa:many-to-one name="idtrabajador" target-entity="Trabajador" optional="false" primaryKey="false" connected-entity-id="_1416872448322252" connected-attribute-id="_1416872448324268" visibile="true" id="_1416872448111223"/>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="SituacionEducativa" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448138224">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="situacion_educativa"/>
+        <jpa:named-query name="SituacionEducativa.findAll">
+            <jpa:query>SELECT s FROM SituacionEducativa s</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionEducativa.findByCodigo">
+            <jpa:query>SELECT s FROM SituacionEducativa s WHERE s.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionEducativa.findByDescripcion">
+            <jpa:query>SELECT s FROM SituacionEducativa s WHERE s.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionEducativa.findByAbreviatura">
+            <jpa:query>SELECT s FROM SituacionEducativa s WHERE s.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionEducativa.findByVigencia">
+            <jpa:query>SELECT s FROM SituacionEducativa s WHERE s.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448138225">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448138226">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448138227">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448139228">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="SituacionTrabajador" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448213229">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="situacion_trabajador"/>
+        <jpa:named-query name="SituacionTrabajador.findAll">
+            <jpa:query>SELECT s FROM SituacionTrabajador s</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionTrabajador.findByCodigo">
+            <jpa:query>SELECT s FROM SituacionTrabajador s WHERE s.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionTrabajador.findByDescripcion">
+            <jpa:query>SELECT s FROM SituacionTrabajador s WHERE s.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionTrabajador.findByAbreviatura">
+            <jpa:query>SELECT s FROM SituacionTrabajador s WHERE s.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SituacionTrabajador.findByVigencia">
+            <jpa:query>SELECT s FROM SituacionTrabajador s WHERE s.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448214230">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448214231">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448214232">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448214233">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="SuspensionLaboral" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448241234">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="suspension_laboral"/>
+        <jpa:named-query name="SuspensionLaboral.findAll">
+            <jpa:query>SELECT s FROM SuspensionLaboral s</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SuspensionLaboral.findByCodigo">
+            <jpa:query>SELECT s FROM SuspensionLaboral s WHERE s.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SuspensionLaboral.findByDescripcion">
+            <jpa:query>SELECT s FROM SuspensionLaboral s WHERE s.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SuspensionLaboral.findByAbreviatura">
+            <jpa:query>SELECT s FROM SuspensionLaboral s WHERE s.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="SuspensionLaboral.findByVigencia">
+            <jpa:query>SELECT s FROM SuspensionLaboral s WHERE s.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448242235">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448242236">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448242237">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448242238">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="TipoContrato" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448268239">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="tipo_contrato"/>
+        <jpa:named-query name="TipoContrato.findAll">
+            <jpa:query>SELECT t FROM TipoContrato t</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoContrato.findByCodigo">
+            <jpa:query>SELECT t FROM TipoContrato t WHERE t.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoContrato.findByDescripcion">
+            <jpa:query>SELECT t FROM TipoContrato t WHERE t.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoContrato.findByAbreviatura">
+            <jpa:query>SELECT t FROM TipoContrato t WHERE t.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoContrato.findByVigencia">
+            <jpa:query>SELECT t FROM TipoContrato t WHERE t.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448268240">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448268241">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448268242">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448268243">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="TipoTrabajador" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448294244">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="tipo_trabajador"/>
+        <jpa:named-query name="TipoTrabajador.findAll">
+            <jpa:query>SELECT t FROM TipoTrabajador t</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoTrabajador.findByCodigo">
+            <jpa:query>SELECT t FROM TipoTrabajador t WHERE t.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoTrabajador.findByDescripcion">
+            <jpa:query>SELECT t FROM TipoTrabajador t WHERE t.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoTrabajador.findByAbreviatura">
+            <jpa:query>SELECT t FROM TipoTrabajador t WHERE t.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoTrabajador.findBySectorPrivado">
+            <jpa:query>SELECT t FROM TipoTrabajador t WHERE t.sectorPrivado = :sectorPrivado</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoTrabajador.findBySectorPublico">
+            <jpa:query>SELECT t FROM TipoTrabajador t WHERE t.sectorPublico = :sectorPublico</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoTrabajador.findByOtraEntidad">
+            <jpa:query>SELECT t FROM TipoTrabajador t WHERE t.otraEntidad = :otraEntidad</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="TipoTrabajador.findByVigencia">
+            <jpa:query>SELECT t FROM TipoTrabajador t WHERE t.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448294245">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448295246">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448295247">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPrivado" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448295248">
+                <jpa:column name="SectorPrivado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sectorPublico" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448295249">
+                <jpa:column name="SectorPublico" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="otraEntidad" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448295250">
+                <jpa:column name="OtraEntidad" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448295251">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Trabajador" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448322252">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="trabajador"/>
+        <jpa:named-query name="Trabajador.findAll">
+            <jpa:query>SELECT t FROM Trabajador t</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByIdtrabajador">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.idtrabajador = :idtrabajador</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByDiscapacidad">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.discapacidad = :discapacidad</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findBySctr">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.sctr = :sctr</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findBySujetoRegimen">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.sujetoRegimen = :sujetoRegimen</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByJornadaMaxima">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.jornadaMaxima = :jornadaMaxima</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByHorarioNocturno">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.horarioNocturno = :horarioNocturno</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findBySindicalizado">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.sindicalizado = :sindicalizado</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findBySituacionEspecial">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.situacionEspecial = :situacionEspecial</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByRuc">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.ruc = :ruc</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByMadreResponsabilidad">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.madreResponsabilidad = :madreResponsabilidad</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByRucEmpleador">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.rucEmpleador = :rucEmpleador</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByTipoCentroformacion">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.tipoCentroformacion = :tipoCentroformacion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Trabajador.findByRentaQuinta">
+            <jpa:query>SELECT t FROM Trabajador t WHERE t.rentaQuinta = :rentaQuinta</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="idtrabajador" attribute-type="java.lang.Long" visibile="true" id="_1416872448322253">
+                <jpa:column name="idtrabajador" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="idtrabajador"/>
+            </jpa:id>
+            <jpa:basic name="discapacidad" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448322254">
+                <jpa:column name="discapacidad" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sctr" attribute-type="java.lang.String" visibile="true" id="_1416872448323255">
+                <jpa:column name="sctr" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sujetoRegimen" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448323256">
+                <jpa:column name="sujeto_regimen" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="jornadaMaxima" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448323257">
+                <jpa:column name="jornada_maxima" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="horarioNocturno" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448323258">
+                <jpa:column name="horario_nocturno" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="sindicalizado" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448323259">
+                <jpa:column name="sindicalizado" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="situacionEspecial" attribute-type="java.lang.Integer" visibile="true" id="_1416872448323260">
+                <jpa:column name="situacion_especial" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="ruc" attribute-type="java.lang.String" visibile="true" id="_1416872448323261">
+                <jpa:column name="ruc" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="madreResponsabilidad" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448323262">
+                <jpa:column name="madre_responsabilidad" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="rucEmpleador" attribute-type="java.lang.String" visibile="true" id="_1416872448324263">
+                <jpa:column name="ruc_empleador" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="tipoCentroformacion" attribute-type="java.lang.Integer" visibile="true" id="_1416872448324264">
+                <jpa:column name="tipo_centroformacion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="rentaQuinta" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448324265">
+                <jpa:column name="renta_quinta" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:one-to-many name="periodoTipotrabajadorList" target-entity="PeriodoTipotrabajador" mapped-by="idtrabajador" collection-type="java.util.List" connected-entity-id="_1416872447943173" connected-attribute-id="_1416872447944180" visibile="true" id="_1416872448324266">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many name="regimenPensionList" target-entity="RegimenPension" mapped-by="idtrabajador" collection-type="java.util.List" connected-entity-id="_1416872448054199" connected-attribute-id="_1416872448055206" visibile="true" id="_1416872448324267">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many name="regimenSaludList" target-entity="RegimenSalud" mapped-by="idtrabajador" collection-type="java.util.List" connected-entity-id="_1416872448110216" connected-attribute-id="_1416872448111223" visibile="true" id="_1416872448324268">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+            <jpa:one-to-many name="contratoList" target-entity="Contrato" mapped-by="idtrabajador" collection-type="java.util.List" connected-entity-id="_141687244746462" connected-attribute-id="_141687244746874" visibile="true" id="_1416872448324269">
+                <jpa:cascade>
+                    <jpa:cascade-all/>
+                </jpa:cascade>
+            </jpa:one-to-many>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Ubigeo" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448350270">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="ubigeo"/>
+        <jpa:named-query name="Ubigeo.findAll">
+            <jpa:query>SELECT u FROM Ubigeo u</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ubigeo.findByCodigo">
+            <jpa:query>SELECT u FROM Ubigeo u WHERE u.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ubigeo.findByDepartamento">
+            <jpa:query>SELECT u FROM Ubigeo u WHERE u.departamento = :departamento</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ubigeo.findByDistrito">
+            <jpa:query>SELECT u FROM Ubigeo u WHERE u.distrito = :distrito</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ubigeo.findByProvincia">
+            <jpa:query>SELECT u FROM Ubigeo u WHERE u.provincia = :provincia</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Ubigeo.findByVigencia">
+            <jpa:query>SELECT u FROM Ubigeo u WHERE u.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448350271">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="departamento" attribute-type="java.lang.String" visibile="true" id="_1416872448350272">
+                <jpa:column name="Departamento" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="distrito" attribute-type="java.lang.String" visibile="true" id="_1416872448350273">
+                <jpa:column name="Distrito" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="provincia" attribute-type="java.lang.String" visibile="true" id="_1416872448350274">
+                <jpa:column name="Provincia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448351275">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Via" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448376276">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="via"/>
+        <jpa:named-query name="Via.findAll">
+            <jpa:query>SELECT v FROM Via v</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Via.findByCodigo">
+            <jpa:query>SELECT v FROM Via v WHERE v.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Via.findByDescripcion">
+            <jpa:query>SELECT v FROM Via v WHERE v.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Via.findByVigencia">
+            <jpa:query>SELECT v FROM Via v WHERE v.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448376277">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448376278">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448377279">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="VinculoFamiliar" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448402280">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="vinculo_familiar"/>
+        <jpa:named-query name="VinculoFamiliar.findAll">
+            <jpa:query>SELECT v FROM VinculoFamiliar v</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="VinculoFamiliar.findByCodigo">
+            <jpa:query>SELECT v FROM VinculoFamiliar v WHERE v.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="VinculoFamiliar.findByDescripcion">
+            <jpa:query>SELECT v FROM VinculoFamiliar v WHERE v.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="VinculoFamiliar.findByAbreviatura">
+            <jpa:query>SELECT v FROM VinculoFamiliar v WHERE v.abreviatura = :abreviatura</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="VinculoFamiliar.findByVigencia">
+            <jpa:query>SELECT v FROM VinculoFamiliar v WHERE v.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448403281">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448403282">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="abreviatura" attribute-type="java.lang.String" visibile="true" id="_1416872448403283">
+                <jpa:column name="Abreviatura" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448403284">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Zona" compositePrimaryKeyType="NONE" visibile="true" minimized="false" id="_1416872448428285">
+        <annotation>@javax.xml.bind.annotation.XmlRootElement</annotation>
+        <jpa:table name="zona"/>
+        <jpa:named-query name="Zona.findAll">
+            <jpa:query>SELECT z FROM Zona z</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Zona.findByCodigo">
+            <jpa:query>SELECT z FROM Zona z WHERE z.codigo = :codigo</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Zona.findByDescripcion">
+            <jpa:query>SELECT z FROM Zona z WHERE z.descripcion = :descripcion</jpa:query>
+        </jpa:named-query>
+        <jpa:named-query name="Zona.findByVigencia">
+            <jpa:query>SELECT z FROM Zona z WHERE z.vigencia = :vigencia</jpa:query>
+        </jpa:named-query>
+        <jpa:attributes>
+            <jpa:id name="codigo" attribute-type="java.lang.String" visibile="true" id="_1416872448429286">
+                <jpa:column name="Codigo" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:sequence-generator name="Codigo"/>
+            </jpa:id>
+            <jpa:basic name="descripcion" attribute-type="java.lang.String" visibile="true" id="_1416872448429287">
+                <jpa:column name="Descripcion" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic name="vigencia" attribute-type="java.lang.Boolean" visibile="true" id="_1416872448429288">
+                <jpa:column name="Vigencia" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:diagram id="_141687244729441">
+        <plane elementRef="_141687244729440" id="_141687244729442_p">
+            <shape elementRef="_141687244732943" id="_141687244732943_gui">
+                <Bounds x="10344.0" y="394.0" width="160.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_141687244736247" id="_141687244736247_gui">
+                <Bounds x="8961.0" y="394.0" width="253.0" height="166.0"/>
+            </shape>
+            <shape elementRef="_141687244740454" id="_141687244740454_gui">
+                <Bounds x="2689.0" y="368.0" width="211.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_141687244743358" id="_141687244743358_gui">
+                <Bounds x="1223.0" y="288.0" width="228.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_141687244746462" id="_141687244746462_gui">
+                <Bounds x="635.0" y="32.0" width="218.0" height="298.0"/>
+            </shape>
+            <shape elementRef="_141687244750075" id="_141687244750075_gui">
+                <Bounds x="7994.0" y="394.0" width="161.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_141687244752979" id="_141687244752979_gui">
+                <Bounds x="1174.0" y="32.0" width="189.0" height="218.0"/>
+            </shape>
+            <shape elementRef="_141687244756088" id="_141687244756088_gui">
+                <Bounds x="917.0" y="394.0" width="193.0" height="298.0"/>
+            </shape>
+            <shape elementRef="_1416872447589101" id="_1416872447589101_gui">
+                <Bounds x="1174.0" y="856.0" width="237.0" height="338.0"/>
+            </shape>
+            <shape elementRef="_1416872447618116" id="_1416872447618116_gui">
+                <Bounds x="9342.0" y="394.0" width="271.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872447645121" id="_1416872447645121_gui">
+                <Bounds x="7639.0" y="394.0" width="227.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872447672126" id="_1416872447672126_gui">
+                <Bounds x="4782.0" y="394.0" width="128.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872447699131" id="_1416872447699131_gui">
+                <Bounds x="2375.0" y="104.0" width="240.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872447726136" id="_1416872447726136_gui">
+                <Bounds x="10042.0" y="394.0" width="174.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872447752141" id="_1416872447752141_gui">
+                <Bounds x="8283.0" y="394.0" width="233.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872447780146" id="_1416872447780146_gui">
+                <Bounds x="4466.0" y="394.0" width="188.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_1416872447806150" id="_1416872447806150_gui">
+                <Bounds x="5713.0" y="394.0" width="170.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_1416872447833154" id="_1416872447833154_gui">
+                <Bounds x="2199.0" y="394.0" width="188.0" height="166.0"/>
+            </shape>
+            <shape elementRef="_1416872447861161" id="_1416872447861161_gui">
+                <Bounds x="7379.0" y="394.0" width="132.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_1416872447888165" id="_1416872447888165_gui">
+                <Bounds x="9741.0" y="394.0" width="173.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_1416872447915169" id="_1416872447915169_gui">
+                <Bounds x="5401.0" y="394.0" width="184.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_1416872447943173" id="_1416872447943173_gui">
+                <Bounds x="32.0" y="856.0" width="257.0" height="198.0"/>
+            </shape>
+            <shape elementRef="_1416872447970181" id="_1416872447970181_gui">
+                <Bounds x="5038.0" y="394.0" width="235.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872447997186" id="_1416872447997186_gui">
+                <Bounds x="6625.0" y="394.0" width="265.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872448024191" id="_1416872448024191_gui">
+                <Bounds x="3757.0" y="394.0" width="211.0" height="186.0"/>
+            </shape>
+            <shape elementRef="_1416872448054199" id="_1416872448054199_gui">
+                <Bounds x="635.0" y="856.0" width="214.0" height="218.0"/>
+            </shape>
+            <shape elementRef="_1416872448081208" id="_1416872448081208_gui">
+                <Bounds x="4096.0" y="394.0" width="242.0" height="186.0"/>
+            </shape>
+            <shape elementRef="_1416872448110216" id="_1416872448110216_gui">
+                <Bounds x="32.0" y="32.0" width="197.0" height="198.0"/>
+            </shape>
+            <shape elementRef="_1416872448138224" id="_1416872448138224_gui">
+                <Bounds x="6267.0" y="394.0" width="230.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872448213229" id="_1416872448213229_gui">
+                <Bounds x="1363.0" y="500.0" width="240.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872448241234" id="_1416872448241234_gui">
+                <Bounds x="7018.0" y="394.0" width="233.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872448268239" id="_1416872448268239_gui">
+                <Bounds x="8644.0" y="394.0" width="189.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872448294244" id="_1416872448294244_gui">
+                <Bounds x="10632.0" y="394.0" width="204.0" height="186.0"/>
+            </shape>
+            <shape elementRef="_1416872448322252" id="_1416872448322252_gui">
+                <Bounds x="353.0" y="394.0" width="218.0" height="398.0"/>
+            </shape>
+            <shape elementRef="_1416872448350270" id="_1416872448350270_gui">
+                <Bounds x="2754.0" y="520.0" width="146.0" height="146.0"/>
+            </shape>
+            <shape elementRef="_1416872448376276" id="_1416872448376276_gui">
+                <Bounds x="6011.0" y="394.0" width="128.0" height="106.0"/>
+            </shape>
+            <shape elementRef="_1416872448402280" id="_1416872448402280_gui">
+                <Bounds x="10964.0" y="394.0" width="203.0" height="126.0"/>
+            </shape>
+            <shape elementRef="_1416872448428285" id="_1416872448428285_gui">
+                <Bounds x="2375.0" y="654.0" width="133.0" height="106.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
